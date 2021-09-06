@@ -1,0 +1,302 @@
+<div fxLayoutAlign="center center" 
+    [@ballOne]='ballState'
+    class="ball one">
+        <mat-icon color="accent">gps_fixed</mat-icon>
+    </div>
+
+<div fxLayoutAlign="center center" 
+    [@ballTwo]='ballState'
+    class="ball two">
+        <mat-icon color="accent">gps_fixed</mat-icon>
+</div>
+
+<div fxLayoutAlign="center center" 
+    [@ballThree]='ballState' 
+    class="ball three">
+        <mat-icon color="accent">gps_fixed</mat-icon>
+</div>
+
+<div fxLayoutAlign="center center" 
+    [@ballFour]='ballState'
+    (@ballFour.done)='ballStateManager()'
+    class="ball four">
+        <mat-icon color="accent">gps_fixed</mat-icon>
+</div>
+
+
+
+<button (click)="stopAnim()">click me 1</button>
+
+<div class="first set">
+    <div class="subtitle">
+        About Me
+    </div>
+    
+    <div fxLayoutAlign="center center" class="text indented" >
+        I'm... <br>
+        a Computer Engineering student. <br>
+        a fast learner. <br>
+        a logical thinker. <br>
+        a problem solver. <br>
+    </div>
+</div>
+
+<div class="set">
+    <div class="subtitle">
+        Programming Languages
+    </div>
+
+    <div fxLayout="row">
+        <div fxLayout="column" class="cell leftColumn">
+        </div>
+    
+        <div fxLayout="column" class="cell rightColumn">
+            <div fxLayout="row">
+                <div class="rightCell tableHeader">
+                    Beginner
+                </div>
+                <div class="rightCell tableHeader">
+                    Elementary
+                </div>
+                <div class="rightCell tableHeader">
+                    Intermediate
+                </div>
+                <div class="rightCell tableHeader">
+                    Advanced
+                </div>
+                <div class="rightCell tableHeader">
+                    Master
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout="row">
+        <div fxLayout="column" class='cell leftColumn'>
+            <div class="rightAlign">
+                C++
+            </div>
+            <div class="rightAlign">
+                C#
+            </div>
+            <div class="rightAlign">
+                Java
+            </div>
+            <div class="rightAlign">
+                Python
+            </div>
+            
+        </div>
+
+        <div fxLayout="column" class="cell rightColumn">
+            <div fxLayout="row">
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="set">
+    <div class="subtitle">
+        Web Development Languages
+    </div>
+
+    <div fxLayout="row">
+        <div fxLayout="column" class="cell leftColumn">
+        </div>
+    
+        <div fxLayout="column" class="cell rightColumn">
+            <div fxLayout="row">
+                <div class="rightCell tableHeader">
+                    Beginner
+                </div>
+                <div class="rightCell tableHeader">
+                    Elementary
+                </div>
+                <div class="rightCell tableHeader">
+                    Intermediate
+                </div>
+                <div class="rightCell tableHeader">
+                    Advanced
+                </div>
+                <div class="rightCell tableHeader">
+                    Master
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout="row">
+        <div fxLayout="column" class='cell leftColumn'>
+            <div class="rightAlign">
+                HTML
+            </div>
+            <div class="rightAlign">
+                CSS
+            </div>
+            <div class="rightAlign">
+                TypeScript
+            </div>
+            <div class="rightAlign">
+                JavaScript
+            </div>
+            
+        </div>
+
+        <div fxLayout="column" class="cell rightColumn">
+            <div fxLayout="row">
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+                <div class="rightCell centerAlign">
+                    <mat-icon>gps_not_fixed</mat-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="set">
+    <div class="subtitle">
+        Educational Background
+    </div>
+
+    <div fxLayout="row">
+        <div fxLayoutAlign="end start" class="table text rightAlign">
+            Junior High School <br>
+            Senior High School <br>
+            College <br>
+        </div>
+
+        <div fxLayoutAlign="start center" class="table text">
+            Bohol Island State University - Main Campus <br>
+            Tagbilaran City Science High School <br>
+            Bohol Island State University - Main Campus <br>
+            [Currently studying Computer Engineering] <br>
+        </div>
+</div>

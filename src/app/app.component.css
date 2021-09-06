@@ -1,0 +1,11 @@
+.header{
+    position: fixed;
+    width: 100%;
+    transition: top 0.3s;
+    z-index: 10;
+}
+
+.body{
+    padding-top: 65px;
+    z-index: 1;
+}
