@@ -25,32 +25,25 @@
 }
 
 .table{
-    flex: 2 2 10em;
-    margin-left: 10px;
-    margin-right: 10px;
+    flex: 2 2 50%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .rightAlign{
     text-align: right;
     font-size:medium;
-    line-height: 200%;
+    line-height: 175%;
 }
 
 .centerAlign{
     text-align: center;
     font-size:medium;
     line-height: 175%;
-
-}
-
-.tableSet{
-    flex: 2 2 5em;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .cell{
-    flex: 1 1 auto;
+    flex: 0 0 100px;
     margin-left: 10px;
     margin-right: 10px;
     padding-left: 10px;
@@ -58,7 +51,7 @@
 }
 
 .rightCell{
-    flex: 0 0 15%;
+    flex: 0 0 100px;
     font-size:medium;
     line-height: 175%;
 }
@@ -69,10 +62,14 @@
     text-indent: 20px;
 }
 
+.tableLabel{
+    line-height: 200%;
+}
+
 .leftColumn{
-    flex: 0 0 30%;
+    flex: 0 0 calc(50% - 200px);
 }
 
 .rightColumn{
-    flex: 0 0 70%;
+    flex: 0 0 calc(50% + 200px);
 }

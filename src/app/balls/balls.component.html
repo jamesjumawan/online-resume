@@ -1,30 +1,31 @@
 <div fxLayoutAlign="center center" 
-    [style.transform]="'translateX(25px)'"
-    class="ball one-idle"
-    id="one"
-    #one>
+    [@ballOne]='ballState'
+    class="ball">
         <mat-icon color="accent">gps_fixed</mat-icon>
     </div>
 
 <div fxLayoutAlign="center center" 
-    class="ball two-idle"
-    id="two">
+    [@ballTwo]='ballState'
+    class="ball">
         <mat-icon color="accent">gps_fixed</mat-icon>
 </div>
 
 <div fxLayoutAlign="center center" 
-    class="ball three-idle"
-    id="three">
+    [@ballThree]='ballState'
+    class="ball">
         <mat-icon color="accent">gps_fixed</mat-icon>
 </div>
 
 <div fxLayoutAlign="center center" 
-    class="ball four-idle"
-    id="four">
+    [@ballFour]='ballState'
+    (@ballFour.done)='ballStateManager()'
+    class="ball">
         <mat-icon color="accent">gps_fixed</mat-icon>
 </div>
 
-<button (click)="testFunc()">
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    click me 1
-</button>
+<div [style.position]="'fixed'">
+    <button (click)="testFunc()">
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        click me 1
+    </button>
+</div>
