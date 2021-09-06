@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
+import { BallsComponent } from './balls/balls.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -17,7 +18,8 @@ import {MatIconModule} from '@angular/material/icon';
   declarations: [
     AppComponent,
     HeaderComponent,
-    BodyComponent
+    BodyComponent,
+    BallsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,32 +1,3 @@
-<div fxLayoutAlign="center center" 
-    [@ballOne]='ballState'
-    class="ball one">
-        <mat-icon color="accent">gps_fixed</mat-icon>
-    </div>
-
-<div fxLayoutAlign="center center" 
-    [@ballTwo]='ballState'
-    class="ball two">
-        <mat-icon color="accent">gps_fixed</mat-icon>
-</div>
-
-<div fxLayoutAlign="center center" 
-    [@ballThree]='ballState' 
-    class="ball three">
-        <mat-icon color="accent">gps_fixed</mat-icon>
-</div>
-
-<div fxLayoutAlign="center center" 
-    [@ballFour]='ballState'
-    (@ballFour.done)='ballStateManager()'
-    class="ball four">
-        <mat-icon color="accent">gps_fixed</mat-icon>
-</div>
-
-
-
-<button (click)="stopAnim()">click me 1</button>
-
 <div class="first set">
     <div class="subtitle">
         About Me

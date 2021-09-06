@@ -43,13 +43,6 @@
 
 }
 
-.ball{
-    left: 50%;
-    top: 400px;
-    position: absolute;
-    z-index: 1;
-}
-
 .tableSet{
     flex: 2 2 5em;
     margin-left: 10px;

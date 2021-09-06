@@ -1,0 +1,95 @@
+.ball{
+    left: 50%;
+    top: 400px;
+    position: absolute;
+    z-index: 1;
+}
+
+@keyframes one-idle{
+    0% {
+        transform: translateX(25px);
+    }
+    100% {
+        transform: translateY(25px) rotate(-360deg);
+    }
+}
+
+@keyframes two-idle{
+    0% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateX(-25px) rotate(-360deg);
+    }
+}
+
+@keyframes three-idle{
+    0% {
+        transform: translateX(-25px);
+    }
+    100% {
+        transform: translateY(-25px) rotate(-360deg);
+    }
+}
+
+@keyframes four-idle{
+    0% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateX(25px) rotate(-360deg);
+    }
+}
+
+.one-idle{
+    animation-name: one-idle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.two-idle{
+    animation-name: two-idle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.three-idle{
+    animation-name: three-idle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.four-idle{
+    animation-name: four-idle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes one-about {
+    0% {
+        transform: translateX(25px)
+    }
+    100% {
+        transform: translateY(525px);
+    }
+}
+
+.one-about{
+    animation-name: one-about;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
