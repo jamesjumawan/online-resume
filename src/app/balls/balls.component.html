@@ -1,27 +1,36 @@
-<div fxLayoutAlign="center center" 
-    [@ballOne]='ballState'
-    class="ball">
+<div fxLayoutAlign="center center" [@ballOne]='ballState' class="ball">
+    <div fxLayoutAlign="center center" [@ballOneWrapper]>
         <mat-icon color="accent">gps_fixed</mat-icon>
     </div>
-
-<div fxLayoutAlign="center center" 
-    [@ballTwo]='ballState'
-    class="ball">
-        <mat-icon color="accent">gps_fixed</mat-icon>
 </div>
 
-<div fxLayoutAlign="center center" 
-    [@ballThree]='ballState'
-    class="ball">
+<div fxLayoutAlign="center center" [@ballTwo]='ballState' class="ball">
+    <div fxLayoutAlign="center center" [@ballTwoWrapper]>
         <mat-icon color="accent">gps_fixed</mat-icon>
+    </div>
 </div>
 
-<div fxLayoutAlign="center center" 
-    [@ballFour]='ballState'
-    (@ballFour.done)='ballStateManager()'
-    class="ball">
+<div fxLayoutAlign="center center" [@ballThree]='ballState' class="ball">
+    <div fxLayoutAlign="center center" [@ballThreeWrapper]>
         <mat-icon color="accent">gps_fixed</mat-icon>
+    </div>
 </div>
+
+<div fxLayoutAlign="center center" [@ballFour]='ballState' (@ballFour.done)='ballStateManager()' class="ball">
+    <div fxLayoutAlign="center center" [@ballFourWrapper]>
+        <mat-icon color="accent">gps_fixed</mat-icon>
+    </div>
+</div>
+
+
+
+
+<div [@testTriggerB]="testStateB">
+    <div [@testTrigger] [style.left]="'50%'" [style.position]="'absolute'">
+        well hello there
+    </div>
+</div>
+
 
 <div [style.position]="'fixed'">
     <button (click)="testFunc()">

@@ -1,5 +1,16 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { ballOneTrigger, ballTwoTrigger, ballThreeTrigger, ballFourTrigger } from './balls.animation';
+import { 
+  ballOneTrigger, 
+  ballTwoTrigger, 
+  ballThreeTrigger, 
+  ballFourTrigger,
+  ballOneWrapper,
+  ballTwoWrapper,
+  ballThreeWrapper,
+  ballFourWrapper,
+  testTrigger,
+  testTriggerB
+} from './balls.animation';
 
 @Component({
   selector: 'app-balls',
@@ -9,13 +20,21 @@ import { ballOneTrigger, ballTwoTrigger, ballThreeTrigger, ballFourTrigger } fro
     ballOneTrigger,
     ballTwoTrigger, 
     ballThreeTrigger, 
-    ballFourTrigger
+    ballFourTrigger,
+    ballOneWrapper,
+    ballTwoWrapper,
+    ballThreeWrapper,
+    ballFourWrapper,
+    testTrigger,
+    testTriggerB
   ]
 })
 export class BallsComponent implements OnInit {
 
-  public ballState: string = "idle1";
-  public nextBallState: string = "idle2";
+  public ballState: string = "stop";
+  public nextBallState: string = "stop";
+
+  public testStateB: string = "stateB1";
 
   public one:any;
 
@@ -111,6 +130,12 @@ export class BallsComponent implements OnInit {
   }
 
   testFunc(){
+
+    if (this.testStateB == "stateB1") {
+      this.testStateB = "stateB2";
+    } else {
+      this.testStateB = "stateB1";
+    }
 
     if (this.ballState != "stop") {
       this.ballState = "stop";
