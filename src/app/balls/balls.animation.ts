@@ -24,7 +24,7 @@ export const ballOneTrigger = trigger('ballOne', [               // ------------
         transform: 'translateY(525px) translateX(-145px) rotate(360deg)'
     })),
     state('prog1', style({
-        transform: 'translateY(1243px) translateX(-172px) rotate(360deg)'
+        transform: 'translateY(1243px) translateX(-197px) rotate(360deg)'
     })),
     state('prog2', style({
         transform: 'translateY(1243px) translateX(178px)'
@@ -33,7 +33,7 @@ export const ballOneTrigger = trigger('ballOne', [               // ------------
         transform: 'translateY(1243px) translateX(178px) rotate(360deg)'
     })),
     state('web1', style({
-        transform: 'translateY(1983px) translateX(-172px) rotate(360deg)'
+        transform: 'translateY(1983px) translateX(-197px) rotate(360deg)'
     })),
     state('web2', style({
         transform: 'translateY(1983px) translateX(-22px)'
@@ -85,12 +85,12 @@ export const ballOneTrigger = trigger('ballOne', [               // ------------
     transition('* => about1', [
         group([
             query(':self', [
-                animate('1s 0s ease-out', style({
+                animate('.5s 0s ease-out', style({
                     transform: 'translateX(-145px)'
                 }))
             ]),
             query('@ballOneWrapper', [
-                animate('1s 0s ease-in-out', style({
+                animate('.5s 0s ease-in-out', style({
                     transform: 'translateY(525px)'
                 }))
             ])
@@ -99,12 +99,12 @@ export const ballOneTrigger = trigger('ballOne', [               // ------------
     transition('* => prog1', [
         group([
             query(':self', [
-                animate('1s 0s ease-out', style({
-                    transform: 'translateX(-172px)'
+                animate('.5s 0s ease-out', style({
+                    transform: 'translateX(-197px)'
                 }))
             ]),
             query('@ballOneWrapper', [
-                animate('1s 0s ease-in-out', style({
+                animate('.5s 0s ease-in-out', style({
                     transform: 'translateY(1243px)'
                 }))
             ])
@@ -114,7 +114,7 @@ export const ballOneTrigger = trigger('ballOne', [               // ------------
         group([
             query(':self', [
                 animate('.5s 0s ease-out', style({
-                    transform: 'translateX(-172px)'
+                    transform: 'translateX(-197px)'
                 }))
             ]),
             query('@ballOneWrapper', [
@@ -141,7 +141,7 @@ export const ballOneTrigger = trigger('ballOne', [               // ------------
     
 
     transition('* => *', [
-        animate('0.75s 0s ease-out')
+        animate('0.75s 0.5s ease-in-out')
     ])
 ]);
 
@@ -159,7 +159,7 @@ export const ballTwoTrigger = trigger('ballTwo', [               // ------------
         transform: 'translateY(553px) translateX(-145px) rotate(360deg)'
     })),
     state('prog1', style({
-        transform: 'translateY(1276px) translateX(-172px) rotate(360deg)'
+        transform: 'translateY(1276px) translateX(-197px) rotate(360deg)'
     })),
     state('prog2', style({
         transform: 'translateY(1276px) translateX(78px)'
@@ -168,7 +168,7 @@ export const ballTwoTrigger = trigger('ballTwo', [               // ------------
         transform: 'translateY(1276px) translateX(78px) rotate(360deg)'
     })),
     state('web1', style({
-        transform: 'translateY(2016px) translateX(-172px) rotate(360deg)'
+        transform: 'translateY(2016px) translateX(-197px) rotate(360deg)'
     })),
     state('web2', style({
         transform: 'translateY(2016px) translateX(-22px)'
@@ -235,7 +235,7 @@ export const ballTwoTrigger = trigger('ballTwo', [               // ------------
         group([
             query(':self', [
                 animate('.5s 0.2s ease-out', style({
-                    transform: 'translateX(-172px)'
+                    transform: 'translateX(-197px)'
                 }))
             ]),
             query('@ballTwoWrapper', [
@@ -249,7 +249,7 @@ export const ballTwoTrigger = trigger('ballTwo', [               // ------------
         group([
             query(':self', [
                 animate('.5s 0.2s ease-out', style({
-                    transform: 'translateX(-172px)'
+                    transform: 'translateX(-197px)'
                 }))
             ]),
             query('@ballTwoWrapper', [
@@ -276,7 +276,7 @@ export const ballTwoTrigger = trigger('ballTwo', [               // ------------
     
     
     transition('* => *', [
-        animate('0.75s 0s ease-out')
+        animate('0.75s 0.5s ease-in-out')
     ])
 ]);
 
@@ -294,7 +294,7 @@ export const ballThreeTrigger = trigger('ballThree', [           // ------------
         transform: 'translateY(581px) translateX(-145px) rotate(360deg)'
     })),
     state('prog1', style({
-        transform: 'translateY(1309px) translateX(-172px) rotate(360deg)'
+        transform: 'translateY(1309px) translateX(-197px) rotate(360deg)'
     })),
     state('prog2', style({
         transform: 'translateY(1309px) translateX(78px)'
@@ -303,7 +303,7 @@ export const ballThreeTrigger = trigger('ballThree', [           // ------------
         transform: 'translateY(1309px) translateX(78px) rotate(360deg)'
     })),
     state('web1', style({
-        transform: 'translateY(2049px) translateX(-172px) rotate(360deg)'
+        transform: 'translateY(2049px) translateX(-197px) rotate(360deg)'
     })),
     state('web2', style({
         transform: 'translateY(2049px) translateX(-22px)'
@@ -366,11 +366,11 @@ export const ballThreeTrigger = trigger('ballThree', [           // ------------
             ])
         ])
     ]),
-    transition('* => prog', [
+    transition('* => prog1', [
         group([
             query(':self', [
                 animate('.5s 0.4s ease-out', style({
-                    transform: 'translateX(-172px)'
+                    transform: 'translateX(-197px)'
                 }))
             ]),
             query('@ballThreeWrapper', [
@@ -380,11 +380,11 @@ export const ballThreeTrigger = trigger('ballThree', [           // ------------
             ])
         ])
     ]),
-    transition('* => prog', [
+    transition('* => web1', [
         group([
             query(':self', [
                 animate('.5s 0.4s ease-out', style({
-                    transform: 'translateX(-172px)'
+                    transform: 'translateX(-197px)'
                 }))
             ]),
             query('@ballThreeWrapper', [
@@ -394,7 +394,7 @@ export const ballThreeTrigger = trigger('ballThree', [           // ------------
             ])
         ])
     ]),
-    transition('* => prog', [
+    transition('* => edu1', [
         group([
             query(':self', [
                 animate('.5s 0.4s ease-out', style({
@@ -411,7 +411,7 @@ export const ballThreeTrigger = trigger('ballThree', [           // ------------
     
     
     transition('* => *', [
-        animate('0.75s 0s ease-out')
+        animate('0.75s 0.5s ease-in-out')
     ])
 ]);
 
@@ -429,7 +429,7 @@ export const ballFourTrigger = trigger('ballFour', [             // ------------
         transform: 'translateY(609px) translateX(-145px) rotate(360deg)'
     })),
     state('prog1', style({
-        transform: 'translateY(1342px) translateX(-172px) rotate(360deg)'
+        transform: 'translateY(1342px) translateX(-197px) rotate(360deg)'
     })),
     state('prog2', style({
         transform: 'translateY(1342px) translateX(-22px)'
@@ -438,7 +438,7 @@ export const ballFourTrigger = trigger('ballFour', [             // ------------
         transform: 'translateY(1342px) translateX(-22px) rotate(360deg)'
     })),
     state('web1', style({
-        transform: 'translateY(2082px) translateX(-172px) rotate(360deg)'
+        transform: 'translateY(2082px) translateX(-197px) rotate(360deg)'
     })),
     state('web2', style({
         transform: 'translateY(2082px) translateX(-122px)'
@@ -505,7 +505,7 @@ export const ballFourTrigger = trigger('ballFour', [             // ------------
         group([
             query(':self', [
                 animate('.5s 0.6s ease-out', style({
-                    transform: 'translateX(-172px)'
+                    transform: 'translateX(-197px)'
                 }))
             ]),
             query('@ballFourWrapper', [
@@ -519,7 +519,7 @@ export const ballFourTrigger = trigger('ballFour', [             // ------------
         group([
             query(':self', [
                 animate('.5s 0.6s ease-out', style({
-                    transform: 'translateX(-172px)'
+                    transform: 'translateX(-197px)'
                 }))
             ]),
             query('@ballFourWrapper', [
@@ -546,7 +546,7 @@ export const ballFourTrigger = trigger('ballFour', [             // ------------
     
     
     transition('* => *', [
-        animate('0.75s 0s ease-out')
+        animate('0.75s .5s ease-in-out')
     ])
 ]);
 
@@ -557,39 +557,3 @@ export const ballTwoWrapper = trigger('ballTwoWrapper', []);
 export const ballThreeWrapper = trigger('ballThreeWrapper', []);
 
 export const ballFourWrapper = trigger('ballFourWrapper', []);
-
-
-
-
-
-
-
-
-
-
-export const testTrigger = trigger('testTrigger', [
-]);
-
-export const testTriggerB = trigger('testTriggerB', [
-    state('stateB1', style({
-        transform: 'translateY(400px) translateX(20px)'
-    })),
-    state('stateB2', style({
-        transform: 'translateY(600px) translateX(50px)'
-    })),
-
-    transition('* => *', [
-        group([
-            query(':self', [
-                animate('1s 0s cubic-bezier(.42,-0.64,.99,.38)', style({
-                    transform: 'translateX(50px)'
-                }))
-            ]),
-            query('@testTrigger', [
-                animate('1s 0s ease-out', style({
-                    transform: 'translateY(600px)'
-                }))
-            ])
-        ])
-    ])
-])

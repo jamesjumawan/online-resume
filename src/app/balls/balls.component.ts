@@ -7,9 +7,7 @@ import {
   ballOneWrapper,
   ballTwoWrapper,
   ballThreeWrapper,
-  ballFourWrapper,
-  testTrigger,
-  testTriggerB
+  ballFourWrapper
 } from './balls.animation';
 
 @Component({
@@ -24,15 +22,13 @@ import {
     ballOneWrapper,
     ballTwoWrapper,
     ballThreeWrapper,
-    ballFourWrapper,
-    testTrigger,
-    testTriggerB
+    ballFourWrapper
   ]
 })
 export class BallsComponent implements OnInit {
 
-  public ballState: string = "stop";
-  public nextBallState: string = "stop";
+  public ballState: string = "idle1";
+  public nextBallState: string = "idle2";
 
   public testStateB: string = "stateB1";
 
@@ -127,6 +123,7 @@ export class BallsComponent implements OnInit {
       default:
         break;
     }
+    
   }
 
   testFunc(){

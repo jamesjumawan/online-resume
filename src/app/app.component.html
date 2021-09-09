@@ -1,4 +1,4 @@
-<div [style.top]="headerTop" class="header">
+<div [style.top]="headerTop" [style.opacity]="headerOpacity" class="header">
   <app-header></app-header>
 </div>
 
@@ -6,11 +6,10 @@
   <app-balls></app-balls>
 </div>
 
-
-<button [style.position]="'fixed'" (click)="logPosition()" [style.margin]="'50px'">
-  click
-</button>
-
 <div class="body">
   <app-body></app-body>
+</div>
+
+<div class="contact">
+  <app-contact></app-contact>
 </div>

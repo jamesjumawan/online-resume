@@ -25,7 +25,7 @@
 }
 
 .table{
-    flex: 2 2 50%;
+    flex: 1 1 50%;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -44,10 +44,8 @@
 
 .cell{
     flex: 0 0 100px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .rightCell{

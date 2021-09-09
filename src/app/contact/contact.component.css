@@ -1,0 +1,18 @@
+.set{
+    padding-bottom: 250px;
+}
+
+.subtitle{
+    text-align: center;
+    padding: 30px;
+    font-size: xx-large;
+}
+
+.paragraphBox{
+    height: 100px;
+}
+
+.form{
+    padding-left: 200px;
+    padding-right: 200px;
+}

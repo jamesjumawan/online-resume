@@ -1,8 +1,9 @@
 .header{
     position: fixed;
     width: 100%;
-    transition: top 0.3s;
-    z-index: 10;
+    transition: 0.3s;
+    z-index: 2;
+    box-shadow: black;
 }
 
 .balls{
@@ -12,4 +13,13 @@
 .body{
     padding-top: 65px;
     z-index: 1;
+    width: 100%;
+}
+
+html{
+    width: 100%;
+}
+
+*{
+    background-color: #ececec;
 }

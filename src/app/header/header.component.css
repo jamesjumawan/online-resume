@@ -5,3 +5,11 @@
 .header{
     z-index: 10;
 }
+
+.toolbar{
+    flex: 1 1 auto;
+}
+
+.text{
+    color: white;
+}
