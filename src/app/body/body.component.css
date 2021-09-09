@@ -12,12 +12,14 @@
     text-align: center;
     padding: 30px;
     font-size: xx-large;
+    font-family: Candara;
 }
 
 .text{
     text-align: left;
     font-size:medium;
     line-height: 175%;
+    font-family: Helvetica;
 }
 
 .indented{
@@ -58,10 +60,12 @@
     transform: rotate(-15deg);
     text-align: left;
     text-indent: 20px;
+    font-family: Helvetica;
 }
 
 .tableLabel{
     line-height: 200%;
+    font-family: Helvetica;
 }
 
 .leftColumn{

@@ -16,3 +16,9 @@
     padding-left: 200px;
     padding-right: 200px;
 }
+
+.error{
+    color: red;
+    text-align: center;
+    font-size: small;
+}

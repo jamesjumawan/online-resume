@@ -13,3 +13,13 @@
 .text{
     color: white;
 }
+
+.white-icon{
+    filter: invert(100%);
+}
+
+.myName{
+    color: white;
+    font-size: xx-large;
+    font-family: Candara;
+}
