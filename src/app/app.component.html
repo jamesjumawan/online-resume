@@ -6,10 +6,22 @@
   <app-balls></app-balls>
 </div>
 
-<div class="body">
-  <app-body></app-body>
+<div class="parallax-wrapper">
+
+  <div class="body">
+    <app-body></app-body>
+  </div>
+  
+  <div class="contact">
+    <app-contact></app-contact>
+
+    <div class="background" [style.transform]="parallax">
+      <app-background></app-background>
+    </div>
+  </div>
+
 </div>
 
-<div class="contact">
-  <app-contact></app-contact>
+<div class="floater">
+  <button (click)="logPosition()">log position</button>
 </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { 
-  ballOneTrigger, 
+import {
+  ballOneTrigger,
   ballTwoTrigger, 
   ballThreeTrigger, 
   ballFourTrigger,
@@ -8,7 +8,7 @@ import {
   ballTwoWrapper,
   ballThreeWrapper,
   ballFourWrapper
-} from './balls.animation';
+} from './test.animations';
 
 @Component({
   selector: 'app-balls',
@@ -27,12 +27,14 @@ import {
 })
 export class BallsComponent implements OnInit {
 
-  public ballState: string = "idle1";
-  public nextBallState: string = "idle2";
+  public ballState: string = "idle";
 
   public testStateB: string = "stateB1";
 
   public one:any;
+
+  
+  ball = document.getElementsByClassName("ball");
 
   constructor() {
   }
@@ -43,105 +45,60 @@ export class BallsComponent implements OnInit {
   @HostListener('window:scroll', []) onscroll(event:any){
     if(this.ballState!="stop"){
       if (window.pageYOffset < 300) {
-        if (this.nextBallState != "idle1" && this.nextBallState != "idle2") {
-          this.nextBallState = "idle1";
+        if (this.ballState != "idle") {
+          this.ballState = "idle";
         }
-      } else if (window.pageYOffset < 900) {
-        if (this.nextBallState != "about1" && this.nextBallState != "about2") {
-          this.nextBallState = "about1";
+      } else if (window.pageYOffset < 1000) {
+        if (this.ballState != "about") {
+          this.ballState = "about";
         }
-      } else if (window.pageYOffset < 1600) {
-        if (this.nextBallState != "prog1" && this.nextBallState != "prog2" && this.nextBallState != "prog3") {
-          this.nextBallState = "prog1";
+      } else if (window.pageYOffset < 1900) {
+        if (this.ballState != "prog1" && this.ballState != "prog2") {
+          this.ballState = "prog1";
         }
-      } else if (window.pageYOffset < 2300) {
-        if (this.nextBallState != "web1" && this.nextBallState != "web2" && this.nextBallState != "web3") {
-          this.nextBallState = "web1";
+      } else if (window.pageYOffset < 2800) {
+        if (this.ballState != "web1" && this.ballState != "web2") {
+          this.ballState = "web1";
         }
       } else if (window.pageYOffset < 30000) {
-        if (this.nextBallState != "edu1" && this.nextBallState != "edu2") {
-          this.nextBallState = "edu1";
+        if (this.ballState != "edu") {
+          this.ballState = "edu";
         }
       }
     }
   }
-  ballStateManager(){
 
-    this.ballState = this.nextBallState;
-    
-    switch (this.ballState) {
-      case "idle1":
-        this.nextBallState = "idle2";
-        break;
-      
-      case "idle2":
-        this.nextBallState = "idle1";
-        break;
-        
-      case "about1":
-        this.nextBallState = "about2";
-        break;
-
-      case "about2":
-        this.nextBallState = "about1";
-        break;
-  
-      case "prog1":
-        this.nextBallState = "prog2";
-        break;
-  
-      case "prog2":
-        this.nextBallState = "prog3";
-        break;
-  
-      case "prog3":
-        this.nextBallState = "prog2";
-        break;
-        
-      case "web1":
-        this.nextBallState = "web2";
-        break;
-  
-      case "web2":
-        this.nextBallState = "web3";
-        break;
-  
-      case "web3":
-        this.nextBallState = "web2";
-        break;
-        
-      case "edu1":
-        this.nextBallState = "edu2";
-        break;
-
-      case "edu2":
-        this.nextBallState = "edu1";
-        break;
-          
-                      
-    
-      default:
-        break;
-    }
-    
-  }
+  test = document.getElementById('about1')?.getBoundingClientRect().left;
 
   testFunc(){
 
-    if (this.testStateB == "stateB1") {
-      this.testStateB = "stateB2";
-    } else {
-      this.testStateB = "stateB1";
-    }
+    // if (this.testStateB == "stateB1") {
+    //   this.testStateB = "stateB2";
+    // } else {
+    //   this.testStateB = "stateB1";
+    // }
 
-    if (this.ballState != "stop") {
-      this.ballState = "stop";
-      this.nextBallState = "stop";
-    } else {
-      this.ballState = "idle1"
-      this.nextBallState = "idle2";
-    }
+    // if (this.ballState != "stop") {
+    //   this.ballState = "stop";
+    //   this.nextBallState = "stop";
+    // } else {
+    //   this.ballState = "idle1"
+    //   this.nextBallState = "idle2";
+    // }
+
+    var other = document.getElementsByClassName("cell");
+
+    var test: Element;
+
+    test = other[0];
+
+    // console.log(test.getBoundingClientRect().left);
+
+    // console.log(other[0].getBoundingClientRect().top);
+
+    console.log(document.getElementById('about1')?.getBoundingClientRect().left);
+    console.log(test);
+    
+
   }
-
-
 }

@@ -1,11 +1,11 @@
 import { Component, HostListener } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 
 export class AppComponent {
   title = 'test06SAWZ85resume';
@@ -16,6 +16,12 @@ export class AppComponent {
   private prevYOffset = 0;
   public currentOffset = 0;
 
+  public parallax: string = "";
+
+  public constructor(private titleService: Title) {
+	this.setTitle("James Jumawan");
+  };
+
   @HostListener('window:scroll', []) onscroll(event:any){
     if (this.prevYOffset > window.pageYOffset) {
       this.headerTop = "0";
@@ -24,10 +30,14 @@ export class AppComponent {
       this.headerTop = "-65px";
       this.headerOpacity = 0;
     }
-    this.prevYOffset = window.pageYOffset;    
-
+    this.prevYOffset = window.pageYOffset;
     this.currentOffset = window.pageYOffset;
 
+    this.parallax = 'translateY(' + (window.pageYOffset * 0.3) + 'px)';
+  }
+  
+  setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
   }
   
   logPosition(){

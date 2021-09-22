@@ -1,16 +1,24 @@
 .first{
-    padding-top: 750px;
+    margin-top: 80vh;
 }
 
 .set{
-    padding-bottom: 500px;
-    /* padding-left: 10%;
-    padding-right: 10%; */
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 60vh;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 0.5s
+}
+
+.set:hover{
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .subtitle{
     text-align: center;
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     font-size: xx-large;
     font-family: Candara;
 }
@@ -26,12 +34,6 @@
     text-indent: 100px;
 }
 
-.table{
-    flex: 1 1 50%;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 .rightAlign{
     text-align: right;
     font-size:medium;
@@ -45,9 +47,9 @@
 }
 
 .cell{
-    flex: 0 0 100px;
-    padding-left: 40px;
-    padding-right: 40px;
+    flex: 1 1 100px;
+    /* padding-left: 40px;
+    padding-right: 40px; */
 }
 
 .rightCell{
@@ -58,9 +60,10 @@
 
 .tableHeader{
     transform: rotate(-15deg);
-    text-align: left;
-    text-indent: 20px;
+    text-align: center;
+    /* text-indent: 10px; */
     font-family: Helvetica;
+    font-weight: bold;
 }
 
 .tableLabel{
@@ -68,10 +71,54 @@
     font-family: Helvetica;
 }
 
+.column{
+    flex: 0 0 calc(10%)
+}
+
+.row{
+    padding-top: 10px;
+}
+
+.icon{
+    text-align: center;
+}
+
+.graphSideSpacer{
+    flex: 1 9 auto;
+}
+
+.edu{
+    flex: 3 3 calc(70%)
+}
+
+.eduInner{
+    line-height: 225%;
+    flex: 2 2 calc(50%);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.eduSideSpacer{
+    flex: 1 1 auto;
+}
+
+.about{
+    flex: 2 2 calc(50% + 120px);
+    line-height: 225%;
+}
+
+.aboutSideSpacer{
+    flex: 2 2 calc(50% - 120px)
+}
+
 .leftColumn{
-    flex: 0 0 calc(50% - 200px);
+    flex: 1 1 calc(45%);
 }
 
 .rightColumn{
-    flex: 0 0 calc(50% + 200px);
+    flex: 1 1 calc(45%);
+}
+
+.bold{
+    font-weight: bold;
 }

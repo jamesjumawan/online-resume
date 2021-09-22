@@ -52,17 +52,17 @@ export class ContactComponent implements OnInit {
             this.postId = data.id;
           },
           error => {
-            console.log(error.status);
             if(error.status == 500){
               this.emailSent = true;
+              this.dialogue();
             }
             else {
               this.errMessage = error.message;
               this.emailSent = false;
+              this.dialogue();
             }
           }
-        )
-        this.dialogue();
+        );
     } else {
       this.showError = 1;
       this.disableButton = false;
@@ -72,7 +72,7 @@ export class ContactComponent implements OnInit {
   dialogue(){
     if (this.emailSent) {
       this.header = "Hello, new friend!";
-      this.message = "Your contact information has been sent to me. I'll contact you as soon as possible!";
+      this.message = "Your contact information has been sent to me.\nI'll contact you as soon as possible!";
     }else{
       this.header = "Uh-oh...";
       this.message = "Seems like we got this error: " + this.errMessage;
@@ -87,7 +87,6 @@ export class ContactComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
     });
   }
 

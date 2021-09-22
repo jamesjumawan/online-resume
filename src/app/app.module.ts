@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -18,6 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
+import { BackgroundComponent } from './background/background.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     HeaderComponent,
     BodyComponent,
     BallsComponent,
-    ContactComponent
+    ContactComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [HttpClientModule],
+  providers: [
+	HttpClientModule,
+	Title
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

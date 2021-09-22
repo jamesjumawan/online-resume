@@ -1,7 +1,119 @@
 .ball{
-    top: 400px;
-    left: 50%;
+    top: 50vh;
+    left: calc(50% - 13px);
     position: absolute;
     text-align: center;
     z-index: 1;
+}
+
+@keyframes ballOneIdleKeyframes {
+    0% {
+        transform: translateX(25px);
+    }
+    100% {
+        transform: translateY(25px);
+    }
+}
+
+@keyframes ballTwoIdleKeyframes {
+    0% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateX(-25px);
+    }
+}
+
+@keyframes ballThreeIdleKeyframes {
+    0% {
+        transform: translateX(-25px);
+    }
+    100% {
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes ballFourIdleKeyframes {
+    0% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateX(25px);
+    }
+}
+
+
+@keyframes ballOneProgKeyframes{
+    0%{
+        transform: translateY(485px) translate(-18vw, 90vh);
+    }
+    100%{
+        transform: translate(1px, 485px) translate(10vw, 90vh);
+    }
+}
+
+@keyframes ballTwoProgKeyframes{
+    0%{
+        transform: translateY(525px) translate(-18vw, 90vh);
+    }
+    100%{
+        transform: translate(3px, 525px) translate(0vw, 90vh);
+    }
+}
+
+@keyframes ballThreeProgKeyframes{
+    0%{
+        transform: translateY(565px) translate(-18vw, 90vh);
+    }
+    100%{
+        transform: translate(3px, 565px) translate(0vw, 90vh);
+    }
+}
+
+@keyframes ballFourProgKeyframes{
+    0%{
+        transform: translateY(605px) translate(-18vw, 90vh);
+    }
+    100%{
+        transform: translate(5px, 605px) translate(-10vw, 90vh);
+    }
+}
+
+
+
+
+@keyframes ballOneWebKeyframes{
+    0%{
+        transform: translateY(785px) translate(-18vw, 150vh);
+    }
+    100%{
+        transform: translate(3px, 784px) translate(0vw, 150vh);
+    }
+}
+
+@keyframes ballTwoWebKeyframes{
+    0%{
+        transform: translateY(825px) translate(-18vw, 150vh);
+    }
+    100%{
+        transform: translate(3px, 824px) translate(0vw, 150vh);
+    }
+}
+
+@keyframes ballThreeWebKeyframes{
+    0%{
+        transform: translateY(865px) translate(-18vw, 150vh);
+    }
+    100%{
+        transform: translate(3px, 864px) translate(0vw, 150vh);
+    }
+}
+
+@keyframes ballFourWebKeyframes{
+    0%{
+        transform: translateY(905px) translate(-18vw, 150vh);
+    }
+    100%{
+        transform: translate(5px, 904px) translate(-10vw, 150vh);
+    }
 }

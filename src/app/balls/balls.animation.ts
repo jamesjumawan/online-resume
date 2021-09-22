@@ -8,8 +8,6 @@ import {
     query
 } from '@angular/animations';
 
-
-
 export const ballOneTrigger = trigger('ballOne', [               // ---------------------------------
     state('idle1', style({
         transform: 'translateX(25px)'

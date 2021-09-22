@@ -1,5 +1,16 @@
 .set{
-    padding-bottom: 250px;
+    margin-bottom: 30vh;
+    padding-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 0.5s
+}
+
+.set:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.spacer{
+    padding-bottom: 1px;
 }
 
 .subtitle{
@@ -13,8 +24,8 @@
 }
 
 .form{
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .error{

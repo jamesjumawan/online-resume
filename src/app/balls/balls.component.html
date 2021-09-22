@@ -16,17 +16,16 @@
     </div>
 </div>
 
-<div fxLayoutAlign="center center" [@ballFour]='ballState' (@ballFour.done)='ballStateManager()' class="ball">
+<div fxLayoutAlign="center center" [@ballFour]='ballState' class="ball">
     <div fxLayoutAlign="center center" [@ballFourWrapper]>
         <mat-icon color="accent">gps_fixed</mat-icon>
     </div>
 </div>
 
-<!-- 
 
-<div [style.position]="'fixed'">
+
+<div [style.position]="'fixed'" [style.top]="'75px'">
     <button (click)="testFunc()">
-        <br><br><br><br><br><br><br><br><br><br><br><br>
         click me 1
     </button>
-</div> -->
+</div>
