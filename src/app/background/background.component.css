@@ -1,7 +1,7 @@
 .wrapper{
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(#210535, #331b36, #703668, #cf86a1);
+    background-image: linear-gradient(#2b0f3f, #402344, #703668, #cf86a1);
 }
 
 .space-wrapper{
@@ -228,13 +228,220 @@
 
 /* --------------------------------------------------------------------------------- */
 
+.astronaut *{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	place-self: center;
+}
+
+.astronaut{
+	position: absolute;
+	top: 125vh;
+	z-index: 10;
+	transform: scale(.75);
+    opacity: .7;
+    animation: astronaut 60s linear infinite;
+}
+
+@keyframes astronaut {
+    0%{
+        transform: translateX(10vw);
+    }
+    50%{
+        transform: translateX(80vw) rotate(360deg);
+    }
+    100%{
+        transform: translateX(10vw) rotate(720deg)
+    }
+}
+
+.astronaut-wrapper{
+    position: absolute;
+    animation: astronaut-wrapper 10s ease-in-out alternate infinite;
+}
+
+@keyframes astronaut-wrapper {
+    0%{
+        transform: translateY(0vmin);
+    }
+    100%{
+        transform: translateY(5vmin);
+    }
+}
+
+.background{
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(indigo, violet);
+}
+
+.backpack .main{
+	width: 5.5vmin;
+	height: 5.5vmin;
+	border-radius: 10%;
+	background-color: white;
+	border: .4vmin solid black;
+	transform: translateY(-1vmin);
+}
+
+/* ------------------------------------------------------------- */
+
+.body>.legs{
+	transform: translateY(1.75vmin);
+}
+
+.body>.legs>*{
+	width: .9vmin;
+	height: 2vmin;
+	border-radius: 50%;
+	background-color: white;
+	border: .35vmin solid black;
+}
+
+.body>.legs>.left{
+	transform: translateX(-1.5vmin) rotate(10deg);
+}
+
+.body>.legs>.right{
+	transform: translateX(1.5vmin) rotate(-10deg);
+}
+
+.body>.legs>.crotch{
+	width: 2.5vmin;
+	height: 1vmin;
+	clip-path: polygon(20% 100%, 80% 100%, 95% 25%, 10% 25%);
+}
+
+.body>.arms>*{
+	width: .75vmin;
+	height: 2.5vmin;
+	border-radius: 50%;
+	background-image: linear-gradient(white 55%, darkred 57%, darkred 75%, white 77%);
+	border: .4vmin solid black;
+}
+
+.body>.arms>.left{
+	transform: translateX(-2.5vmin) rotate(30deg);
+}
+
+.body>.arms>.right{
+	transform: translateX(2.5vmin) rotate(-30deg);
+}
+
+.body .torso{
+	width: 3.5vmin;
+	height: 0;
+	border-left: 1vmin solid transparent;
+	border-right: 1vmin solid transparent;
+	border-bottom: 3.5vmin solid black;
+}
+
+.body .torso::before{
+	content: "";
+	position: absolute;
+	width: 3vmin;
+	height: 0;
+	border-left: .8vmin solid transparent;
+	border-right: .8vmin solid transparent;
+	border-bottom: 3vmin solid white;
+	transform: translateY(.25vmin);
+}
+
+.body>.torso>.buttons{
+	width: 2.5vmin;
+	height: 1vmin;
+	border-radius: .5vmin;
+	background-color: white;
+	border: .3vmin solid black;
+	transform: translateY(2.1vmin);
+}
+
+.body>.torso>.buttons::before{
+	content: "";
+	position: absolute;
+	width: .25vmin;
+	height: .25vmin;
+	border-radius: 50%;
+	background-color: darkred;
+	border: .2vmin solid black;
+	transform: translate(-.8vmin, 0.1vmin);
+}
+
+.body>.torso>.buttons::after{
+	content: "";
+	position: absolute;
+	width: 0.85vmin;
+	height: 0.6vmin;
+	border-radius: .30vmin;
+	background-image: linear-gradient(yellow 33%, black 35%, black 45%, yellow 47%);
+	border: .2vmin solid black;
+	transform: translate(0.6vmin, 0.0vmin);
+}
+
+
+
+/* --------------------------------------------------------------- */
+
+.head{
+	transform: translateY(-6vmin);
+}
+
+.head .ears{
+	width: 11.5vmin;
+	height: 4.25vmin;
+	background-color: white;
+	border-radius: 1.75vmin;
+	border: .4vmin solid black;
+}
+
+.head .helmet{
+	width: 10vmin;
+	height: 10vmin;
+	border-radius: 50%;
+	background-color: white;
+	border: .4vmin solid black;
+}
+
+.head .face{
+	width: 8.5vmin;
+	height: 8.5vmin;
+	border-radius: 50%;
+	background-image: radial-gradient(at center, black 65%, white 67%);
+	border: .3vmin solid black;
+	transform: translateY(.25vmin);
+}
+
+.head .face::after{
+	content: "";
+	width: 2vmin;
+	height: .75vmin;
+	border-radius: 50%;
+	background-color: white;
+	transform: translate(-1.5vmin, 1vmin) rotate(-30deg);
+}
+
+.head .face::before{
+	content: "";
+	width: .40vmin;
+	height: .40vmin;
+	border-radius: 50%;
+	background-color: white;
+	transform: translate(-1.5vmin, 2.25vmin);
+}
+
+/* --------------------------------------------------------------------------------- */
+
 .sky-wrapper{
     opacity: 75%;
 }
 
 .cloud{
     position: absolute;
-    background-color: white;
+    background-color: rgb(130, 68, 175);
     width: 15vmin;
     height: 3vmin;
     border-radius: 3vmin;
@@ -333,6 +540,154 @@
     width: 2.5vmin;
     height: 2.5vmin;
     transform: translate(6.5vmin, -3vmin);
+}
+
+/* --------------------------------------------------------------------------------- */
+
+.hot-air-balloon{
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    place-content: center;
+    left: 25vw;
+    top: 225vh;
+    opacity: 0.5;
+    animation: hot-air-balloon 10s ease-in-out alternate infinite;
+}
+
+@keyframes hot-air-balloon {
+    0%{
+        transform: translateY(0vmin);
+    }
+    100%{
+        transform: translateY(5vmin);
+    }
+}
+
+.balloon *{
+    width: 10vmax;
+    height: 10vmax;
+    display: flex;
+    place-content: center;
+    position: absolute;
+    clip-path: polygon(0% 0%, 0% 110%, 100% 110%, 100% 0%);
+}
+
+.balloon>*>.left{
+    clip-path: polygon(0% 0%, 52% 0%, 55% 500%, 0% 500%);
+}
+
+.balloon>*>.right{
+    clip-path: polygon(100% 0%, 48% 0%, 48% 500%, 100% 500%);
+}
+
+.layer1>*{
+    width: 8vmax;
+    height: 8vmax;
+    border-radius: 50%;
+}
+
+.layer2>*{
+    width: 6vmax;
+    height: 6vmax;
+    border-radius: 50%;
+}
+
+.layer3>*{
+    width: 4vmax;
+    height: 4vmax;
+    border-radius: 50%;
+}
+
+.layer1 .left{
+    background-color: #58aeff;
+
+}
+
+.layer2 .left{
+    background-color: #ffd086;
+}
+
+.layer3 .left{
+    background-color: #8ac8d3;
+}
+
+.layer1 .right{
+    background-color: #ffae79;
+}
+
+.layer2 .right{
+    background-color: #aed96d;
+}
+
+.layer3 .right{
+    background-color: #f8887a;
+}
+
+.balloon>.layer1>*::before{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+    transform: translateY(50%);
+}
+
+.balloon>.layer2>*::before{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: 150%;
+    background-color: inherit;
+    transform: translateY(33.33%);
+}
+
+.balloon>.layer3>*::before{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: 250%;
+    background-color: inherit;
+    transform: translateY(20%);
+}
+
+.balloon>.layer1>.left::before{
+    clip-path: polygon(6.7% 25%, 50% 0%, 50% 100%);
+}
+
+.balloon>.layer2>.left::before{
+    clip-path: polygon(2.85% 11.11%, 50% 0%, 50% 100%);
+}
+
+.balloon>.layer3>.left::before{
+    clip-path: polygon(1% 4%, 50% 0%, 50% 100%);
+}
+
+.balloon>.layer1>.right::before{
+    clip-path: polygon(93.3% 25%, 48% 0%, 48% 100%);
+}
+
+.balloon>.layer2>.right::before{
+    clip-path: polygon(97.15% 11.11%, 48% 0%, 48% 100%);
+}
+
+.balloon>.layer3>.right::before{
+    clip-path: polygon(99% 4%, 48% 0%, 48% 100%);
+}
+
+.basket{
+    display: flex;
+    place-self: center;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    width: 2vmax;
+    height: 1.5vmax;
+    background-image: linear-gradient(rgb(167, 60, 60), 
+        rgb(139, 60, 60), rgb(105, 45, 45), rgb(109, 31, 31));
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    transform: translate(200%, 12.5vmax);
 }
 
 /* --------------------------------------------------------------------------------- */

@@ -3,7 +3,22 @@
     left: calc(50% - 13px);
     position: absolute;
     text-align: center;
+    transform: scale(1.2);
     z-index: 1;
+    filter: drop-shadow(1px 1px 1px #00000050);
+}
+
+.ballModel{
+    animation: ballModel 1s linear infinite;
+}
+
+@keyframes ballModel{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes ballOneIdleKeyframes {

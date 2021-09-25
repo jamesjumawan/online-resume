@@ -7,7 +7,7 @@ html, body{
     width: 100%;
     transition: 0.3s;
     z-index: 30;
-    box-shadow: black;
+    box-shadow: #00000050;
 }
 
 .balls{
